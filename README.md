@@ -1,243 +1,179 @@
-<div align="center">
+# 🏥 Medware — Disease Predictor & Patient Health Intelligence Platform
 
-# 🩺 Disease Predictor Application
-### *Clinical Risk Assessment & Multi-Symptom Diagnostic Platform*
-
-[![Python](https://img.shields.io/badge/Python-3.13-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
-[![Django](https://img.shields.io/badge/Django-5.2-092E20?style=for-the-badge&logo=django&logoColor=white)](https://djangoproject.com)
-[![Django REST Framework](https://img.shields.io/badge/DRF-3.15-red?style=for-the-badge&logo=django&logoColor=white)](https://django-rest-framework.org)
-[![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.9-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)](https://scikit-learn.org)
-[![React](https://img.shields.io/badge/React-18.3-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev)
-[![Vite](https://img.shields.io/badge/Vite-6.0-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-
-<p align="center">
-  A production-ready, full-stack healthcare intelligence platform that bridges supervised machine learning classifiers with an intuitive, glassmorphic React interface to deliver real-time disease risk stratification, explainable biomarker insights, and multi-symptom differential diagnosis.
-</p>
-
-[Key Features](#-key-features) • [System Architecture](#-system-architecture) • [Machine Learning Models](#-machine-learning-models) • [API Specification](#-api-specification) • [Getting Started](#-getting-started) • [Engineering Highlights](#-engineering-highlights)
+[![Python](https://img.shields.io/badge/Python-3.13+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Django](https://img.shields.io/badge/Django-5.2+-092E20?style=for-the-badge&logo=django&logoColor=white)](https://www.djangoproject.com/)
+[![Django REST Framework](https://img.shields.io/badge/DRF-3.18+-red?style=for-the-badge)](https://www.django-rest-framework.org/)
+[![React](https://img.shields.io/badge/React-18+-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-6.0+-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Scikit-Learn](https://img.shields.io/badge/scikit--learn-SVM-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)](https://scikit-learn.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4+-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Material-UI](https://img.shields.io/badge/MUI-5.15+-007FFF?style=for-the-badge&logo=mui&logoColor=white)](https://mui.com/)
+[![Chart.js](https://img.shields.io/badge/Chart.js-4.4+-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white)](https://www.chartjs.org/)
 
 ---
-
-</div>
 
 ## 📌 Executive Summary
 
-Early clinical detection remains one of the most effective strategies for preventing chronic disease progression and reducing long-term mortality. However, manual biomarker interpretation is often fragmented across multiple tests and reference tables.
-
-**Disease Predictor Application** addresses this challenge by providing a unified, high-performance diagnostic suite:
-- **Metabolic Risk**: Type 2 Diabetes prediction using physiological markers (Glucose, Insulin, BMI, Pedigree).
-- **Cardiovascular Health**: Coronary artery disease screening calibrated against clinical Cleveland datasets.
-- **Renal Function**: Chronic Kidney Disease (CKD) staging via serum creatinine, urea, and albuminuria analysis.
-- **Multi-Symptom Differential Triage**: Probabilistic Naive Bayes classifier evaluating 97 standardized clinical symptoms against 28+ differential diagnoses.
+**Medware** is a full-stack, enterprise-grade clinical diagnostics and health tracking web application. By bridging **Support Vector Machine (SVC)** machine learning models with a **Django REST** backend and a responsive **React 18** client, Medware provides individuals and healthcare practitioners with instantaneous disease prognosis across **41 medical conditions**, intelligent specialist referrals, and longitudinal vital signs analytics (Blood Pressure and Blood Glucose charting).
 
 ---
 
-## ⚡ Key Features
+## ✨ Key Features & Capabilities
 
-- **🚀 Real-Time Low-Latency Inference**: Pre-trained Scikit-Learn pipelines are pre-loaded as in-memory singletons during Django initialization, guaranteeing sub-50ms API response times.
-- **🔍 Explainable Biomarker Insights**: Instead of "black-box" outputs, each prediction highlights specific out-of-range clinical factors driving the elevated score (e.g., stage 2 hypertension, insulin resistance, albuminuria grade).
-- **💡 Actionable Care Guidelines**: Returns evidence-based lifestyle modifications and recommended clinical laboratory tests (e.g., HbA1c, 12-lead ECG, eGFR panels).
-- **📊 Interactive Risk Meter**: Dynamic SVG visualizer displaying quantitative probability (0-100%) and color-coded clinical risk tiers (*Low Risk*, *Moderate Risk*, *High Urgency*).
-- **🎯 One-Click Preset Profiles**: Allows recruiters and clinicians to test healthy, borderline, and high-risk physiological profiles with a single click.
-- **🛡️ Secure & Validated Endpoints**: Every biomarker payload is strictly validated using Django REST Framework serializers with bounded medical ranges.
+### 🧠 1. Intelligent Disease Predictor Engine
+- **Multi-Symptom Diagnostic Formulation**: Evaluates combinations of **129 clinical symptoms** in real time.
+- **Support Vector Classifier (SVC)**: Built using `scikit-learn` with calibrated probability estimators (`predict_proba`) and balanced oversampling (`RandomOverSampler`) to handle multi-class medical distributions accurately.
+- **Top-5 Ranked Prognosis**: Outputs differential diagnoses ranked by confidence percentage.
+- **Automated Specialist Referral Matrix**: Intelligently maps predictions to appropriate medical specialties (Cardiologist, Neurologist, Dermatologist, Gastroenterologist, ENT Specialist, Rheumatologist, Allergist/Immunologist, Urologist, etc.).
+
+### 📊 2. Longitudinal Patient Health Dashboard
+- **Real-Time BMI Computation**: Instant body mass index evaluation categorized into color-coded clinical ranges (Underweight, Normal, Overweight, Obese).
+- **Blood Pressure Trends**: Interactive Bar & Scatter visualizations (`Chart.js`) illustrating Systolic and Diastolic logs against hypertension thresholds.
+- **Blood Glucose Monitoring**: Pre-prandial and post-prandial glucose tracking with automatic hyper/hypoglycemia visual indicators.
+- **Interactive Calendar & Log Modals**: Date-stamped entries with modal interfaces for vital signs and lifestyle factors (exercise frequency, diet type, smoking/alcohol intake).
+
+### 👨‍⚕️ 3. Clinical Specialist Directory
+- **80 Medical Specialists**: Searchable directory populated across 20 medical disciplines.
+- **Live Filtering**: Instant specialty filtering with asynchronous pagination and randomized doctor rotation.
+- **Direct Tele-Consultation**: Direct telephone calling links and physician profile previews.
+
+### 🔐 4. Secure Authentication & Profile System
+- **Custom AppUser Model**: Email-first authentication using Django's `AbstractBaseUser` and session management.
+- **Real-Time Email Uniqueness Check**: Asynchronous AJAX validation during registration to ensure zero duplicate user accounts.
+- **Protected Endpoints**: Session-based authentication with CSRF token verification across all sensitive health records.
 
 ---
 
-## 🏗️ System Architecture
+## 🏛️ System Architecture
 
 ```mermaid
 flowchart TD
-    subgraph Client ["Client Layer (React + Vite)"]
-        UI["Modern Web Interface\nTailwind CSS + Lucide Icons"]
-        State["State Management & Diagnostic Forms"]
-        Axios["Axios API Client\n(Vite Reverse Proxy)"]
-        UI --> State --> Axios
+    subgraph Client ["Frontend (React 18 + Vite)"]
+        UI[User Interface & Forms]
+        Context[Global AppContext]
+        Charts[Chart.js / MUI Data Visuals]
+        SymptomSelector[129-Symptom Autocomplete]
     end
 
-    subgraph Gateway ["Reverse Proxy / Gateway"]
-        ViteProxy["Vite Dev Server Proxy\n:5173 -> :8000/api/"]
+    subgraph Server ["Backend (Django 5 + REST Framework)"]
+        AuthView[User Registration & Login API]
+        PatientView[Patient Profile & Vitals API]
+        DoctorView[Doctor Directory API]
+        PredictView[SVC Inference Pipeline]
     end
 
-    subgraph Backend ["Backend Layer (Django REST Framework)"]
-        DRF["Django REST API Router"]
-        Ser["Serializers & Input Validation"]
-        Views["Class-Based Views\n(Diabetes, Heart, Kidney, Symptoms)"]
-        DRF --> Ser --> Views
+    subgraph Engine ["Machine Learning Core"]
+        SVM[Support Vector Classifier - SVC]
+        Scaler[StandardScaler Preprocessor]
+        Sampler[RandomOverSampler Balancer]
+        Dataset[(Training.csv - 4,920 Clinical Records)]
     end
 
-    subgraph MLEngine ["Machine Learning Engine (Scikit-Learn)"]
-        Singleton["Predictor Service Singleton\n(In-Memory Pipeline Cache)"]
-        M1[("Diabetes Model\nRandom Forest")]
-        M2[("Heart Model\nRandom Forest")]
-        M3[("Kidney Model\nRandom Forest")]
-        M4[("Symptom Model\nMultinomial NB")]
-        
-        Views --> Singleton
-        Singleton --> M1
-        Singleton --> M2
-        Singleton --> M3
-        Singleton --> M4
+    subgraph Storage ["Database Layer"]
+        DB[(PostgreSQL / SQLite Engine)]
     end
 
-    Axios --> ViteProxy --> DRF
+    UI --> Context
+    Context --> Charts
+    Context --> SymptomSelector
+    SymptomSelector -->|Binary Vector URL| PredictView
+    UI -->|JSON Vitals/Auth| Server
+    PredictView --> Scaler
+    Scaler --> SVM
+    SVM -->|Top 5 Diseases + Confidence| PredictView
+    Server --> DB
 ```
 
 ---
 
-## 🔬 Machine Learning Models & Performance
+## 🗄️ Database Schema & Data Models
 
-All models are engineered using **Scikit-Learn `Pipeline` architectures**, ensuring data scaling (`StandardScaler`) and estimators are bundled atomically to eliminate data leakage.
-
-| Diagnostic Module | ML Algorithm | Training Accuracy | Validated Features | Clinical Baseline Reference |
-| :--- | :--- | :---: | :--- | :--- |
-| **Type 2 Diabetes** | **Random Forest Classifier** *(100 Estimators, Max Depth 8)* | **97.13%** | Fasting Glucose, BMI, Insulin, Age, Blood Pressure, Diabetes Pedigree, Skinfold | Pima Indians Diabetes Diagnostic Standards (ADA) |
-| **Cardiovascular Disease** | **Random Forest Classifier** *(100 Estimators, Max Depth 8)* | **95.33%** | Resting BP, Serum Cholesterol, Chest Pain Type, Max Heart Rate, ST Depression, Fluoroscopy Vessels | Cleveland Clinic Cardiovascular Dataset (AHA) |
-| **Chronic Kidney Disease (CKD)** | **Random Forest Classifier** *(100 Estimators, Max Depth 8)* | **99.07%** | Serum Creatinine, Blood Urea, Albuminuria, Urine Specific Gravity, Hemoglobin, Potassium | National Kidney Foundation (NKF KDOQI) |
-| **Multi-Symptom Diagnostic Engine** | **Multinomial Naive Bayes** *(Laplace Smoothing $\alpha = 0.5$)* | **99.96%** | 97 Standardized Symptoms mapping to 28+ differential diagnoses | Columbia-Presbyterian Symptom-Disease Ontology |
-
----
-
-## 🔌 API Specification
-
-The backend exposes clean, RESTful JSON endpoints:
-
-### 1. Health Status Check
-- **`GET /api/health/`**
-- **Response:**
-  ```json
-  {
-    "status": "online",
-    "service": "Disease Predictor ML API",
-    "version": "1.0.0",
-    "models_loaded": {
-      "diabetes": true,
-      "heart": true,
-      "kidney": true,
-      "symptoms": true
-    }
-  }
-  ```
-
-### 2. Type 2 Diabetes Prediction
-- **`POST /api/predict/diabetes/`**
-- **Payload:**
-  ```json
-  {
-    "glucose": 160.0,
-    "bmi": 33.5,
-    "age": 48,
-    "blood_pressure": 82.0,
-    "insulin": 180.0,
-    "skin_thickness": 28.0,
-    "pregnancies": 2,
-    "diabetes_pedigree": 0.85
-  }
-  ```
-- **Response:**
-  ```json
-  {
-    "disease": "Type 2 Diabetes",
-    "prediction": true,
-    "prediction_label": "High Likelihood of Diabetes",
-    "probability": 95.57,
-    "risk_level": "High Risk",
-    "risk_color": "red",
-    "key_factors": [
-      "Elevated fasting/random blood glucose (160 mg/dL). Normal is <100 mg/dL fasting.",
-      "BMI of 33.5 indicates clinical obesity, a major driver of insulin resistance."
-    ],
-    "recommendations": [
-      "Consult an Endocrinologist or Primary Care Physician for clinical evaluation.",
-      "Schedule an HbA1c test with a certified lab to confirm 3-month glycemic control.",
-      "Incorporate at least 150 minutes of moderate-intensity aerobic exercise per week."
-    ]
-  }
-  ```
-
-### 3. Cardiovascular Health Prediction
-- **`POST /api/predict/heart/`**
-- **Payload:**
-  ```json
-  {
-    "age": 62,
-    "sex": 1,
-    "chest_pain_type": 3,
-    "resting_bp": 155.0,
-    "cholesterol": 280.0,
-    "max_heart_rate": 125.0,
-    "exercise_angina": 1,
-    "st_depression": 2.2,
-    "st_slope": 2,
-    "major_vessels": 2
-  }
-  ```
-
-### 4. Chronic Kidney Disease Prediction
-- **`POST /api/predict/kidney/`**
-- **Payload:**
-  ```json
-  {
-    "age": 58,
-    "blood_pressure": 90.0,
-    "serum_creatinine": 2.4,
-    "blood_urea": 75.0,
-    "albumin": 2,
-    "hemoglobin": 10.2,
-    "specific_gravity": 1.015,
-    "blood_glucose_random": 165.0
-  }
-  ```
-
-### 5. Multi-Symptom Differential Diagnosis
-- **`POST /api/predict/symptoms/`**
-- **Payload:**
-  ```json
-  {
-    "symptoms": ["chills", "high_fever", "sweating", "headache", "muscle_pain"]
-  }
-  ```
-- **Response:**
-  ```json
-  {
-    "primary_diagnosis": "Malaria",
-    "primary_confidence": 99.07,
-    "differential_diagnoses": [
-      {
-        "disease": "Malaria",
-        "confidence": 99.07,
-        "matching_symptoms": ["chills", "high_fever", "sweating", "headache", "muscle_pain"]
-      },
-      {
-        "disease": "Dengue",
-        "confidence": 0.85,
-        "matching_symptoms": ["chills", "high_fever", "headache", "muscle_pain"]
-      }
-    ],
-    "urgency": "High",
-    "general_advice": "Consult a medical professional for definitive diagnostic blood smear / antigen testing."
-  }
-  ```
+| Model | Table Name | Purpose |
+|:------|:-----------|:--------|
+| **`AppUser`** | `Accounts_appuser` | Custom user entity using email credentials and superuser permissions. |
+| **`PatientProfile`** | `Accounts_patientprofile` | Patient biometrics, date of birth, diet, exercise habits, `bp_log` JSON, and `blood_glucose` JSON. |
+| **`DoctorProfile`** | `Accounts_doctorprofile` | 80 pre-seeded clinical doctors categorized by specialty, address, experience, and contact numbers. |
+| **`symptoms_diseases`** | `symptoms_diseases` | 4,920 row training dataset containing 129 binary symptom columns and target `prognosis`. |
+| **`Predicted_Diseases`** | `Accounts_predicted_diseases` | Last generated diagnostic prediction, probability distributions, and referral specialist. |
 
 ---
 
-## 💻 Tech Stack
+## 🔌 API Endpoints Reference
 
-### Frontend
-- **React 18** — Functional components with hooks (`useState`, `useEffect`, `useCallback`).
-- **Vite 6** — Next-generation frontend tooling with lightning-fast Hot Module Replacement (HMR).
-- **Tailwind CSS 3** — Utility-first styling with custom glassmorphic panels and dark-mode palette.
-- **Lucide Icons** — Accessible, crisp SVG iconography.
-- **Axios** — Robust HTTP client configured with request interceptors and backend proxies.
+| Method | Endpoint | Description | Auth Required |
+|:-------|:---------|:------------|:-------------:|
+| `POST` | `/register` | Register a new user with custom email & password validation | No |
+| `POST` | `/login` | Authenticate user credentials and establish session | No |
+| `POST` | `/logout` | Invalidate active session | No |
+| `GET`  | `/user` | Retrieve authenticated user profile | Yes |
+| `GET`  | `/check_email?email=<val>` | Verify email availability asynchronously | No |
+| `GET`  | `/patient` | Fetch logged-in patient vitals, medical history, and charts | Yes |
+| `PUT`  | `/patient` | Update patient vitals, logs, or personal information | Yes |
+| `GET`  | `/doctor/<str:sp>/` | List doctors by specialty (or `"All"`) | No |
+| `GET`  | `/prediction/<str:symptoms>/` | Run SVM model prediction on 129-symptom binary vector | No |
+| `GET`  | `/insert` | Seed doctor directory records into database | No |
+| `GET`  | `/insertpd` | Seed patient dataset from `Training.csv` into database | No |
+| `GET`  | `/train` | Retrain SVC classifier and update `model.pkl` | No |
 
-### Backend & Machine Learning
-- **Django 5.2 & Python 3.13** — High-level Python web framework providing security and modularity.
-- **Django REST Framework (DRF)** — RESTful serialization, schema validation, and API routing.
-- **django-cors-headers** — Secure Cross-Origin Resource Sharing handling.
-- **Scikit-Learn 1.9** — Supervised Machine Learning pipelines, StandardScaler, RandomForestClassifier, MultinomialNB.
-- **NumPy & Pandas** — Vectorized numerical computing and tabular data manipulation.
-- **Joblib** — High-performance model serialization and deserialization.
+---
+
+## 📁 Repository Directory Structure
+
+```text
+Disease Predictor Application/
+├── Accounts/                           # Authentication, Patient & Doctor Profile App
+│   ├── migrations/                     # Database migrations
+│   ├── admin.py                        # Django Admin model registration
+│   ├── apps.py                         # App configuration
+│   ├── models.py                       # AppUser, PatientProfile, DoctorProfile, symptoms_diseases
+│   ├── serializers.py                  # DRF ModelSerializers
+│   ├── validations.py                  # Custom password and email validations
+│   ├── views.py                        # Auth, Profile, and Doctor Directory views
+│   └── urls.py                         # Accounts routing
+├── backend/                            # Django project configuration & virtual environment
+│   ├── settings.py                     # Project settings (dual Postgres/SQLite support)
+│   ├── urls.py                         # Main URL dispatcher
+│   ├── views.py                        # Single-page application template serving
+│   ├── wsgi.py / asgi.py               # WSGI and ASGI server entries
+│   └── venv/                           # Python virtual environment
+├── DiseasePredictor/                   # Machine Learning Prediction App
+│   ├── migrations/                     # App migrations
+│   ├── views.py                        # Model prediction, dataset seeding, training views
+│   ├── urls.py                         # Prediction routing
+│   └── Training.csv                    # 4,920 patient clinical dataset
+├── frontend/                           # React 18 + Vite Frontend
+│   ├── src/
+│   │   ├── assets/
+│   │   │   ├── components/             # 30+ Modular React Components
+│   │   │   │   ├── Header.jsx          # Dynamic navigation bar
+│   │   │   │   ├── Hero.jsx            # Landing hero section
+│   │   │   │   ├── Services.jsx        # Healthcare services overview
+│   │   │   │   ├── About.jsx           # Platform mission section
+│   │   │   │   ├── dpWindow.jsx        # Interactive symptom selector & prediction interface
+│   │   │   │   ├── searchSymptoms.jsx  # MUI Autocomplete symptom search
+│   │   │   │   ├── Prediction.jsx      # Top-5 prognosis cards & probability badges
+│   │   │   │   ├── Dashboard.jsx       # Patient personal health dashboard
+│   │   │   │   ├── PatientProfile.jsx  # Health metrics, BMI, and vital logs
+│   │   │   │   ├── BP_chart.jsx        # Chart.js blood pressure bar visualization
+│   │   │   │   ├── Sugar_chart.jsx     # Chart.js blood glucose trend line graph
+│   │   │   │   ├── ContactDoctor.jsx   # Doctor directory and search
+│   │   │   │   ├── DoctorProfile.jsx   # Specialist cards with calling actions
+│   │   │   │   ├── Calendar.jsx        # Custom date picker
+│   │   │   │   └── context.jsx         # Global state & authentication provider
+│   │   │   └── img/                    # SVG assets and clinical vectors
+│   │   ├── App.jsx                     # Route definitions (Predictor, Dashboard, Consult)
+│   │   ├── App.css                     # Custom animations and CSS design tokens
+│   │   └── main.jsx                    # Vite React DOM entry
+│   ├── package.json                    # Frontend dependencies
+│   └── vite.config.js                  # Vite bundler configuration
+├── model.pkl                           # Trained Support Vector Classifier model artifact
+├── Training.csv                        # Primary training dataset
+├── manage.py                           # Django root administrative entry point
+├── START_APPLICATION.bat               # One-click dual-server launcher
+├── run_backend.bat                     # Backend server launcher
+├── run_frontend.bat                    # Frontend dev server launcher
+└── requirements.txt                    # Python dependencies
+```
 
 ---
 
@@ -246,93 +182,92 @@ The backend exposes clean, RESTful JSON endpoints:
 ### Prerequisites
 - **Python 3.10+** (Tested on Python 3.13)
 - **Node.js 18+** & **npm**
+- **Git**
 
-### Quick Start (1-Click on Windows)
-Simply double-click the included master launcher:
-```powershell
-START_APPLICATION.bat
-```
-*Automatically starts both the Django ML server (port 8000) and the React frontend (port 5173), then immediately opens your default browser.*
-
----
-
-### Manual Installation & Setup
-
-#### 1. Clone the Repository
+### 1. Clone the Repository
 ```bash
 git clone https://github.com/Sachin2400/Disease-Predictor-Application.git
-cd Disease-Predictor-Application
+cd "Disease Predictor Application"
 ```
 
-#### 2. Backend Setup
+### 2. Backend Setup
 ```bash
-# Navigate to backend directory
-cd backend
-
-# Create and activate virtual environment
-python -m venv venv
-
-# Windows:
-venv\Scripts\activate
-# Linux/macOS:
-# source venv/bin/activate
+# Activate virtual environment
+call backend\venv\Scripts\activate.bat   # Windows
+# or: source backend/venv/bin/activate  # macOS / Linux
 
 # Install dependencies
 pip install -r requirements.txt
 
-# Run migrations
+# Apply migrations
 python manage.py migrate
 
-# (Optional) Retrain models
-python ml_engine/train_models.py
+# (Optional) Seed doctor and training data
+python manage.py shell -c "from Accounts.views import insert_data; insert_data(None)"
+python manage.py shell -c "from DiseasePredictor.views import insert_patient_data; insert_patient_data(None)"
 
-# Start Django development server
+# Run backend development server
 python manage.py runserver 127.0.0.1:8000
 ```
 
-#### 3. Frontend Setup
+### 3. Frontend Setup
 ```bash
-# Open a new terminal and navigate to frontend directory
 cd frontend
 
-# Install npm dependencies
+# Install dependencies
 npm install
 
-# Start Vite dev server
+# Start Vite development server
 npm run dev
 ```
 
-Navigate to **`http://localhost:5173`** in your browser.
+### 4. One-Click Launch (Windows)
+Double-click `START_APPLICATION.bat` in the root folder to start both the Django backend (`http://127.0.0.1:8000`) and the Vite React frontend (`http://localhost:5173`) in independent windows.
 
 ---
 
-## 🏆 Engineering Highlights & Design Patterns
+## 🧪 Testing the ML Prediction Engine
 
-1. **Singleton Model Pattern**:
-   Machine Learning weights and pipelines are loaded into memory exactly **once** upon server boot via a Python Singleton pattern (`DiseasePredictorService`). This eliminates model-loading overhead and guarantees deterministic sub-50ms latency per request.
-2. **Defensive Input Serialization**:
-   All patient values pass through strict DRF Serializers with biological boundary checks (e.g. glucose constrained between 40-300 mg/dL, age between 1-120 years). Invalid data receives structured HTTP 400 validation errors without reaching the ML pipeline.
-3. **Data Leakage Prevention**:
-   Every pre-processing step (including z-score standardization via `StandardScaler`) is encased inside Scikit-Learn `Pipeline` objects, ensuring mean and standard deviations computed during training remain frozen at inference time.
-4. **Resilient Reverse Proxy**:
-   The Vite development server is configured with a built-in reverse proxy routing `/api` requests directly to `http://127.0.0.1:8000`, preventing browser CORS pre-flight penalties and streamlining local development.
+You can test prediction directly using any HTTP client or browser:
+
+```bash
+# Pass 129 binary indicator string (1 for presence, 0 for absence)
+curl http://127.0.0.1:8000/prediction/010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000/
+```
+
+**Response:**
+```json
+[
+  {
+    "diseases": [
+      "Fungal infection",
+      "Heart attack",
+      "Chronic cholestasis",
+      "Hepatitis C",
+      "Jaundice"
+    ],
+    "diseases_prob": [
+      0.219,
+      0.142,
+      0.109,
+      0.086,
+      0.070
+    ],
+    "consult_doctor": "Dermatologist"
+  }
+]
+```
 
 ---
 
-## 👨‍💻 Author
+## 👨‍💻 Author & Contributions
 
-**Sachin Choudhary**  
-- **GitHub**: [@Sachin2400](https://github.com/Sachin2400)  
-- **Email**: sachin24250@gmail.com  
+- **Developer**: [Sachin](https://github.com/Sachin2400)
+- **Project**: Medware — Disease Predictor Application
+- **Repository**: [Disease-Predictor-Application](https://github.com/Sachin2400/Disease-Predictor-Application.git)
 
 ---
 
 ## 📄 License
 
-This project is licensed under the [MIT License](LICENSE) — free for educational and personal portfolio use.
-
----
-
-<div align="center">
-  <sub>Built with ❤️ for precision clinical risk exploration.</sub>
-</div>
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
