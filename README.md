@@ -48,7 +48,7 @@
 flowchart TD
     subgraph Frontend ["Frontend Client (React 18 + Vite + MUI)"]
         Landing["Landing Page & Service Overview"]
-        AuthModal["Auth Modal (Login / Register / AJAX Validation)"]
+        AuthModal["Auth Modal (Login / Register / Validation)"]
         SymptomUI["129-Symptom Autocomplete & Vector Generator"]
         DashboardUI["Patient Dashboard & Health Metrics"]
         DoctorUI["Doctor Directory & Specialty Filter"]
@@ -72,16 +72,16 @@ flowchart TD
         DB[("PostgreSQL / SQLite Engine")]
     end
 
-    SymptomUI -->|GET /prediction/{binary_vector}/| MLViews
+    SymptomUI -->|GET /prediction/:symptoms/| MLViews
     MLViews --> ModelArtifact
     ModelArtifact --> SVM
-    SVM -->|Top 5 Diseases + Confidence + Referral| MLViews
+    SVM -->|Top 5 Diagnoses & Referral| MLViews
     MLViews --> DB
 
     AuthModal -->|POST /register, /login| AuthViews
-    DashboardUI -->|GET/PUT /patient| ProfileViews
-    DoctorUI -->|GET /doctor/{specialty}/| ProfileViews
-    ChartsUI <--> ProfileViews
+    DashboardUI -->|GET, PUT /patient| ProfileViews
+    DoctorUI -->|GET /doctor/:specialty/| ProfileViews
+    ChartsUI --- ProfileViews
 
     AuthViews --> DB
     ProfileViews --> DB
