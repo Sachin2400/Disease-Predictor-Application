@@ -50,3 +50,4 @@ const DoctorProfile = ({ doctors }) => {
 };
 
 export default DoctorProfile;
+

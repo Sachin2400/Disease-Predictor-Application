@@ -79,3 +79,4 @@ export default function Sugar_chart({ chartData }) {
 
   return <Line options={options} data={data} height={200} />;
 }
+

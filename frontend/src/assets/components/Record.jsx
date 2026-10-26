@@ -88,3 +88,4 @@ const Record = ({ record, setRecord }) => {
 };
 
 export default Record;
+

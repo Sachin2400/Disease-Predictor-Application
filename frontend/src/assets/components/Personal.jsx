@@ -74,3 +74,4 @@ const Personal = ({ responseData }) => {
 };
 
 export default Personal;
+

@@ -13,3 +13,4 @@ urlpatterns = [
     path("dashboard", index),
     path('icon.svg', load_icon),
 ]
+

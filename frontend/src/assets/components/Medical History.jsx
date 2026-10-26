@@ -42,3 +42,4 @@ const MedicalHistory = ({ data }) => {
 };
 
 export default MedicalHistory;
+

@@ -213,3 +213,4 @@ const ProfileModal = ({ profileModal, setProfileModal }) => {
 };
 
 export default ProfileModal;
+

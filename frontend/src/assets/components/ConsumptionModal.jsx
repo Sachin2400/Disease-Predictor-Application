@@ -104,3 +104,4 @@ const ConsumptionModal = ({ consumptionModal, setConsumptionModal }) => {
 };
 
 export default ConsumptionModal;
+

@@ -40,3 +40,4 @@ def validate_password(data):
     if not password:
         raise ValidationError('a password is needed')
     return True
+

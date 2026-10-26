@@ -79,3 +79,4 @@ export default function BP_chart({ chartData }) {
 
   return <Bar options={options} data={data} height={200} />;
 }
+

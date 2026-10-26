@@ -12,3 +12,4 @@ urlpatterns = [
     path('check_email', views.check_email, name='check_email'),
     path('check_admin', views.check_admin, name='check_admin'),
 ]
+

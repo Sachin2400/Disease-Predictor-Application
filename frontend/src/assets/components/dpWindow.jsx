@@ -138,7 +138,7 @@ const DpWindow = () => {
               disabled={symptoms.length === 0}
               className="flex-1 h-11 font-semibold"
             >
-              Run AI Prediction
+              Predict Diagnosis
             </Button>
             <Button
               variant="outlined"
@@ -159,7 +159,7 @@ const DpWindow = () => {
             <Prediction prediction={prediction} />
           ) : (
             <div className="w-full h-full min-h-56 bg-sky-50/50 rounded-xl flex items-center justify-center text-gray-400 italic border border-sky-100">
-              Select symptoms and click "Run AI Prediction" to see probabilities
+              Select symptoms and click "Predict Diagnosis" to view clinical probabilities
             </div>
           )}
         </div>
@@ -175,7 +175,7 @@ const DpWindow = () => {
           </div>
         </div>
         <div className="img-wrapper w-full md:w-2/5 flex justify-center">
-          <img src={dpImg} alt="Disease Predictor AI" className="w-full max-w-xs object-contain" />
+          <img src={dpImg} alt="Disease Predictor" className="w-full max-w-xs object-contain" />
         </div>
       </section>
     </div>
@@ -183,3 +183,4 @@ const DpWindow = () => {
 };
 
 export default DpWindow;
+

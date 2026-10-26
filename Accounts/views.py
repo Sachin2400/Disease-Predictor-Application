@@ -260,3 +260,4 @@ def check_admin(request):
     else:
         response_data = {'error': 'Email parameter is missing'}
         return JsonResponse(response_data, status=400)
+

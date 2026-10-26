@@ -53,3 +53,4 @@ const Prediction = ({ prediction }) => {
 };
 
 export default Prediction;
+

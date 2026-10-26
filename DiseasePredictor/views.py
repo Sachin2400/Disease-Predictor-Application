@@ -163,3 +163,4 @@ def predict(request, symptoms=''):
     data = Predicted_Diseases.objects.all()
     serializer = PredictionSerializer(data, many=True)
     return Response(serializer.data)
+

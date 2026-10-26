@@ -16,3 +16,4 @@ def load_icon(request):
     if os.path.exists(icon_path):
         return FileResponse(open(icon_path, 'rb'), content_type='image/svg+xml')
     return HttpResponse(status=404)
+

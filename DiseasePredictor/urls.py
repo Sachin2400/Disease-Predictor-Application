@@ -6,3 +6,4 @@ urlpatterns = [
     path('insertpd', insert_patient_data),
     path('train', train),
 ]
+

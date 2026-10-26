@@ -97,3 +97,4 @@ const GlucoseLevel = ({ responseData }) => {
 };
 
 export default GlucoseLevel;
+

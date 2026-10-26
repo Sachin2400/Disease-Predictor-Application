@@ -40,3 +40,4 @@ const SymptomSearch = ({
 };
 
 export default SymptomSearch;
+

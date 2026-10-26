@@ -234,3 +234,4 @@ class Predicted_Diseases(models.Model):
     diseases = ArrayField(models.CharField(max_length=200), blank=True, default=list)
     diseases_prob = ArrayField(models.FloatField(default=0), blank=True, default=list)
     consult_doctor = models.CharField(max_length=100, default="")
+

@@ -37,7 +37,7 @@ const Services = () => {
         <div className="img-wrapper w-full md:w-1/2 flex justify-center">
           <img
             src={diseasePredImg}
-            alt="Disease Predictor AI"
+            alt="Disease Predictor"
             className="w-full max-w-md object-contain"
           />
         </div>
@@ -73,3 +73,4 @@ const Services = () => {
 };
 
 export default Services;
+

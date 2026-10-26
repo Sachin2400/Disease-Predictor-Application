@@ -167,3 +167,4 @@ const LogModal = ({ logModal, setLogModal }) => {
 };
 
 export default LogModal;
+

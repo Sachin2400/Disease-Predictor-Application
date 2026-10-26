@@ -65,3 +65,4 @@ class DoctorProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = DoctorProfile
         fields = '__all__'
+
