@@ -27,6 +27,10 @@ yarn-error.log*
 dist-ssr/
 *.local
 
+# Interview & local documents
+*.pdf
+generate_*.py
+
 # Archives
 *.zip
 
